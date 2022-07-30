@@ -9,7 +9,7 @@
 - Unlimited app switch
 - No need to enter app type (auto detecting web, worker)
 
-## Setting Config File
+## Setting Config Link
 
 - Go to [gist.github.com](https://gist.github.com) and create a secret gist
 - Filename: HerokuDynoSwitcher, Gist description: HerokuDynoSwitcher
@@ -37,12 +37,18 @@
 - Go to repo: [HuzunluArtemis/HerokuDynoSwitcher](https://github.com/HuzunluArtemis/HerokuDynoSwitcher)
 - Fork with this button:
 - ![image](https://user-images.githubusercontent.com/84624971/181908627-a099a958-5841-4fc5-bf70-87cfd1b7665b.png)
-- Go to Settings:
+- Go to your Settings:
 - ![image](https://user-images.githubusercontent.com/84624971/181908664-ae1fc2cb-6c05-4141-b903-9883a28d3529.png)
-- Go to Secrets > Actions (Can be shown as Secrets) > New Repository Secret
+- Go to your Secrets > Actions (Can be shown as Secrets) > New Repository Secret
 - ![image](https://user-images.githubusercontent.com/84624971/181908800-f134353b-7072-4f46-9b37-acc7ba03ca4a.png)
 - Paste your config like this. Name: `CONFIG_FILE_URL` Value: Your edited config link:
 - ![image](https://user-images.githubusercontent.com/84624971/181908866-e59276d0-3ca1-4478-aea2-5aa365a40f46.png)
+- Now go to your `Actions` tab:
+- ![image](https://user-images.githubusercontent.com/84624971/181909231-11eb6260-9141-4adf-8dcf-94112b87e42d.png)
+- Accept this warning:
+- ![image](https://user-images.githubusercontent.com/84624971/181909363-4e51e944-87b1-4144-991c-088de393681b.png)
+- Go to `HuzunluArtemis HerokuDynoSwitcher` > `Enable workflow`:
+- ![image](https://user-images.githubusercontent.com/84624971/181909559-d3e83259-8a9f-41c9-b8c3-25bcfc1932d2.png)
 - Done. Your apps will automatically change on the 1st and 15th of each month.
 - If you want to add new bot(s) edit your config file from gist.github.com. Dont edit anything from github.
 
