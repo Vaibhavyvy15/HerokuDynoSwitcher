@@ -8,6 +8,7 @@
 
 - Unlimited app switch
 - No need to enter app type (auto detecting web, worker)
+- Stops / starts all processes
 
 ## Setting Config Link
 
