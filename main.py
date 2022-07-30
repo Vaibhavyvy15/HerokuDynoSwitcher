@@ -44,7 +44,6 @@ except Exception as e:
     exit(1)
 
 now = failed = success = 0
-ayinbiri = True if datetime.datetime.now().day == 1 else False
 for dyno in dynos:
     now += 1
     try:
@@ -53,7 +52,7 @@ for dyno in dynos:
         print(f"[#{now}] Error when parsing item: {now}. Skipped.")
         continue
     print(f"\n[#{now}] Changing the dyno.")
-    proc = changeDyno(api1, name1, 1 if ayinbiri else 0)
+    proc = changeDyno(api1, name1, 1 if datetime.datetime.now().day == 1 else 0)
     if not proc:
         print(f"[#{now}] First app cannot stopped. Skipped.")
         failed += 1
@@ -61,7 +60,7 @@ for dyno in dynos:
         print(f"[#{now}] First app stopped. Waiting 5 secs.")
         success += 1
     time.sleep(5)
-    proc = changeDyno(api2, name2, 0 if ayinbiri else 1)
+    proc = changeDyno(api2, name2, 0 if datetime.datetime.now().day == 1 else 1)
     if not proc:
         print(f"[#{now}] Second app cannot started. Skipped.")
         failed += 1
