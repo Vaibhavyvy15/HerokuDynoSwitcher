@@ -1,0 +1,20 @@
+name: HuzunluArtemis HerokuDynoSwitcher
+on:
+  schedule:
+  - cron: "0 0 1,15 * *"
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+          cache: 'pip'
+      - name: Installing requirements
+        run: pip install -r requirements.txt
+      - name: Switching dynos
+        run: python3 main.py
+        env:
+          CONFIG_FILE_URL: ${{ secrets.CONFIG_FILE_URL }}
